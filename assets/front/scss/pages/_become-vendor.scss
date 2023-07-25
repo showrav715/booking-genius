@@ -1,0 +1,167 @@
+/*-------------------------------
+become a vendor area start
+--------------------------------*/
+.become-a-vendor{
+    padding: 60px 0px 60px;
+    .become-a-vendor-box{
+        box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 19px 30px 30px;
+        .left-form{
+            .title{
+                font-size: 28px;
+                line-height: 38px;
+                font-weight: 600;
+            }
+            .my-form-group{
+                label{
+                    font-size: 14px;
+                    a{
+                        color: $base-color;
+                    }
+                }
+            }
+            .mybtn1{
+                margin-top: 20px;
+            }
+        }
+        .right-img{
+
+        }
+    }
+}
+
+
+/*-------------------------------
+become a vendor area End
+--------------------------------*/
+
+/*-------------------------------
+How dose it Work Start
+--------------------------------*/
+
+.how-it-work{
+    padding: 00px 0px 30px;
+    .header-area{
+        text-align: center;
+        margin-bottom: 40px;
+        .title{
+            font-size: 28px;
+            line-height: 38px;
+            font-weight: 600;
+        }
+    }
+}
+.single-how-it-work{
+    text-align: center;
+    .icon{
+        text-align: center;
+        margin-bottom: 20px;
+        img{
+            display: inline-block;
+        }
+    }
+    .content{
+        .title{
+            font-size: 24px;
+            line-height: 34px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+
+/*-------------------------------
+How dose it Work End
+--------------------------------*/
+
+
+/*-------------------------------
+Be local Expert Area Start
+--------------------------------*/
+.be-local-expert{
+    padding: 60px 0px 250px;
+    background: #f2f7ff;
+    .header-area{
+        text-align: center;
+        margin-bottom: 40px;
+        .title{
+            font-size: 28px;
+            line-height: 38px;
+            font-weight: 600;
+        }
+    }
+}
+.single-local-expert{
+    text-align: center;
+    .icon{
+        text-align: center;
+        margin-bottom: 20px;
+        img{
+            display: inline-block;
+        }
+    }
+    .content{
+        .title{
+            font-size: 24px;
+            line-height: 34px;
+            font-weight: 600;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+
+/*-------------------------------
+Be local Expert Area End
+--------------------------------*/
+
+/*-------------------------------
+lx Video Area start
+--------------------------------*/
+
+.lx-video{
+    margin-top: -180px;
+    .video-box{
+        background: url(../images/bv-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 200px 0px 200px;
+        text-align: center;
+    }
+}
+
+
+/*-------------------------------
+Vendor Faq Area Start
+--------------------------------*/
+.vendor-faq{
+    padding-bottom: 70px;
+    padding-top: 15px;
+    .tour-faq-area{
+        display: block;
+        .title{
+            text-align: center;
+        }
+        .single-accordion{
+            .title{
+                text-align: left;
+            }
+        }
+    }
+}
+/*-------------------------------
+Vendor Faq Area End 
+--------------------------------*/
+
+
+
+
+
+
+

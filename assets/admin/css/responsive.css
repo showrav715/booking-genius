@@ -1,0 +1,15 @@
+
+
+@media (max-width: 768px) {
+
+    #wrapper #content-wrapper {
+        padding-left: 0px;
+    }
+    .topbar {
+        padding-left: 10px;
+    }
+    .sidebar{
+        left: -250px;
+    }
+}
+

@@ -1,0 +1,18 @@
+/*-------------------------------
+become a vendor area start
+--------------------------------*/
+.become-a-vendor {
+  padding: 60px 0px 60px; }
+  .become-a-vendor .become-a-vendor-box {
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 12px 20px 20px; }
+    .become-a-vendor .become-a-vendor-box .left-form .title {
+      font-size: 28px;
+      line-height: 38px;
+      font-weight: 600; }
+
+/*-------------------------------
+become a vendor area End
+--------------------------------*/

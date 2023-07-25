@@ -1,0 +1,227 @@
+/*-------------------------------
+Vendor Banner start
+--------------------------------*/
+.vendor-banner{
+    background: url(../images/vendor-profile-bg.png);
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/*-------------------------------
+Vendor Banner End
+--------------------------------*/
+
+/*-------------------------------
+Vendor top info Start
+--------------------------------*/
+
+.vendor-profile-top{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+    padding: 30px 0px 30px;
+    .organize-by{
+        .organizer-profile{
+            display: flex;
+            .left{
+                img{
+                    width: 110px;
+                    height: 110px;
+                    margin-right: 20px;
+                    border: 2px solid $base-color;
+                    border-radius: 50%;
+                }
+            }
+            .right{
+                align-self: center;
+            .title{
+                font-size: 20px;
+                line-height: 30px;
+                font-weight: 600;
+                border-bottom: 0px;
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+            } 
+            .date{
+                font-size: 12px;
+                line-height: 22px;
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+            .id{
+                
+                font-size: 12px;
+                line-height: 22px;
+                margin-bottom: 0px;
+            }
+            }
+        }
+    }
+    .t-info-list{
+        display: flex;
+        .rating{
+            font-size: 36px;
+            line-height: 46px;
+            font-weight: 600;
+            background: $base-color;
+            color: #fff;
+            display: block;
+            align-self: center;
+            padding: 10px 20px 4px;
+            border-radius: 10px;
+            margin-right: 20px;
+            small{
+                font-size: 18px;
+                margin-left: -7px;
+            }
+            i{
+                font-size: 16px;
+                margin-left: -5px;
+                position: relative;
+                top: -8px;
+            }
+        }
+        .review-count{
+            padding: 0px 10px;
+            font-size: 36px;
+            line-height: 36px;
+            font-weight: 600;
+            color: $heading-color;
+            text-align: center;
+            display: block;
+            align-self: center;
+            border-right: 1px solid rgba(0, 0, 0, 0.2);
+            margin-right: 20px;
+            padding-right: 30px;
+            small{
+                font-size: 14px;
+                line-height: 14px;
+                margin-left: -7px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .pack-count{
+            padding: 0px 10px;
+            font-size: 36px;
+            line-height: 36px;
+            font-weight: 600;
+            color: $heading-color;
+            text-align: center;
+            display: block;
+            align-self: center;
+            small{
+                font-size: 14px;
+                line-height: 14px;
+                margin-left: -7px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+/*-------------------------------
+Vendor top info End
+--------------------------------*/
+
+/*-------------------------------
+Vendor Details Area Start
+--------------------------------*/
+
+.single-details{
+    .vendor-info-area{
+        box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 19px 20px 20px;
+        .title{
+            font-size: 24px;
+            line-height: 34px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+    }
+    .load-more-area{
+        display: block;
+        width: 100%;
+        text-align: center;
+        .mybtn1{
+            display: inline-block;
+            margin-top: 30px;
+        }
+    }
+    .aside-right{
+        .contact-info{
+            box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 19px 20px 20px;
+            .title{
+                display: block;
+                font-size: 18px;
+                line-height: 28px;
+                margin-bottom: 0px;
+                font-weight: 600;
+                border-bottom: 1px solid #d5d2d2;
+                padding-bottom: 19px;
+                img{
+                    margin-right: 6px;
+                }
+            }
+            .contact-list{
+                padding-top: 30px;
+                li{
+                    display: inline-block;
+                    margin-bottom: 10px;
+                    &:last-child{
+                        margin-bottom: 0px;
+                    }
+                    p{
+                        padding-left: 45px;
+                        position: relative;
+                        i{
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: 0;
+                            width: 35px;
+                            height: 35px;
+                            line-height: 35px;
+                            text-align: center;
+                            border-radius: 50%;
+                            background: #f8f8f8;
+                            color: $base-color;
+                        }
+                    }
+                }
+            }
+            .social-links{
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                padding-top: 20px;
+                margin-top: 10px;
+                li{
+                    display: inline-block;
+                    a{
+                        display: block;
+                        width: 35px;
+                        height: 35px;
+                        line-height: 35px;
+                        text-align: center;
+                        border-radius: 50%;
+                        border: 1px solid  rgba(0, 0, 0, 0.1);
+                        margin: 0px 3px;
+                        &:hover{
+                            background: $base-color;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*-------------------------------
+Vendor Details Area Start
+--------------------------------*/

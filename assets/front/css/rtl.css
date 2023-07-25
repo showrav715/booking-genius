@@ -1,0 +1,357 @@
+body{
+    direction: rtl;
+}
+
+.slick-slider{
+    direction: ltr;
+}
+
+.single-banner .banner-overlay{
+    direction: rtl;
+    text-align: right;
+}
+
+.serch-icon-area {
+    right: auto;
+    left: 0px;
+}
+
+.nice-select .option{
+    text-align: right;
+}
+.user-top-menu-area {
+    padding-left: 0px;
+    padding-right: 25px;
+}
+.top-header .content .right-content .social-link {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+.user-top-menu-area::before {
+    left: auto;
+    right: 0px;
+}
+.header-area .title{
+    text-align: right;
+}
+
+.tour-slider .owl-controls .owl-nav .owl-prev {
+    right: auto;
+    left: 0px;
+}
+.tour-slider .owl-controls .owl-nav .owl-next {
+    right: auto;
+    left: 40px;
+}
+.testimonial .single-testimonial .people .content{
+    text-align: right;
+}
+
+.testimonial .single-testimonial .people .img img {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+.single-blog .content{
+    text-align: right;
+}
+.single-blog .content .top-meta li {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+input[type="email"]{
+    direction: ltr;
+    text-align: left;
+}
+
+.footer-widget{
+    text-align: right;
+}
+
+
+.address-widget .about-info li p {
+    padding-left: 0px;
+    padding-right: 50px;
+}
+
+.address-widget .about-info li p i {
+    left: auto;
+    right: 0px;
+}
+.single-tours .content{
+    text-align: right;
+}
+.single-tours .content .country i {
+    margin-right: 0px;
+    margin-left: 5px;
+}
+.single-tours .content .review-area .stars {
+    margin-right: 0px;
+    margin-left: 15px;
+}
+
+.single-tours .content .price-area-wrapper .left-area .icon {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.sub-categori .right-area .item-filter .filter-list li p {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.nice-select .option.selected{
+    text-align: right;
+}
+
+.sub-categori .left-area .filter-result-area .body-area .filter-list li{
+    text-align: right;
+}
+
+.sub-categori .left-area .filter-result-area .body-area .filter-list li a i{
+    transform: rotate(180deg);
+}
+
+.sub-categori .left-area .design-area .body-area .filter-list li{
+    direction: rtl;
+    text-align: right;
+}
+
+.sub-categori .left-area .design-area .body-area .filter-list li .content .check-box .form-check .checkmark {
+    left: auto;
+    right: 0px;
+}
+
+.sub-categori .left-area .design-area .body-area .filter-list li .content .check-box .form-check label {
+    margin-left: 0px;
+    margin-right: 30px;
+}
+
+.tour-details-banner .left .title{
+    text-align: right;
+}
+.tour-top-info .info-content .review-box {
+    right: auto;
+    left: 0px;
+}
+
+.aside-right .price-area .discount {
+    left: -32px;
+    right: auto;
+    transform: rotate(-50deg);
+}
+
+.aside-right .price-area{
+    text-align: right;
+}
+
+.aside-right .book-now-area .title{
+    text-align: right;
+}
+
+.aside-right .book-now-area .start-time span{
+    text-align: right;
+}
+
+
+.extra-price-wrap .flex-grow-1{
+    text-align: right;
+}
+
+.aside-right .organize-by .title{
+    text-align: right;
+}
+
+
+.aside-right .organize-by .organizer-profile .left img {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+.overview-area{
+    text-align: right;
+}
+.map-location-area {
+    text-align: right;
+}
+
+.review-area{
+    text-align: right;
+}
+
+.tour-faq-area .title{
+    text-align: right;
+}
+
+.tour-faq-area .single-accordion .title img {
+    margin-right: 0px;
+    margin-left: 5px;
+}
+.tour-faq-area .single-accordion .accordion-body{
+    text-align: right;
+}
+
+.review-area .review-list li .single-comment .left-area {
+    padding-right: 0px;
+    margin-right: 0px;
+    padding-left: 30px;
+    margin-left: 30px;
+}
+
+.review-area .review-list li .single-comment .left-area::before {
+    right: auto;
+    left: 0px;
+}
+
+.single-details.hotel .facilities-wizerd .title{
+    text-align: right;
+}
+.single-details.hotel .facilities-wizerd .facilities-list li{
+    text-align: right;
+}
+.single-details.hotel .facilities-wizerd .facilities-list li img {
+    margin-right: 0px;
+    margin-left: 7px;
+}
+
+.single-details.hotel .available-rooms .room-option .r-s-option{
+    text-align: right;
+}
+
+.single-details.hotel .available-rooms .room-option .r-s-option.guests{
+    text-align: right;
+}
+.single-details.hotel .available-rooms .all-rooms .single-room .hotel-info{
+    text-align: right;
+}
+
+.single-details.hotel .available-rooms .all-rooms .single-room .hotel-room p{
+    text-align: right;
+}
+.single-details.hotel .available-rooms .hotel_room_book_status .control-book{
+    text-align: left;
+}
+
+.single-details.hotel .available-rooms .hotel_room_book_status .row_total_price .col-md-6:nth-child(2) {
+    border-left: 0px;
+    border-right: 1px solid #ccc;
+}
+
+
+
+.book-now-area .date_show{
+    text-align: right;
+}
+.book-now-area .date_show li{
+    list-style: none;
+}
+.book-now-area .date_show li{
+    direction: rtl;
+}
+
+
+.main-breadcrumb-area .pages li a {
+    margin-right: 0px;
+    margin-left: 30px;
+}
+.main-breadcrumb-area .pages li a::after {
+    right: auto;
+    left: -23px;
+    transform: rotate(180deg);
+}
+.main-breadcrumb-area{
+    text-align: right;
+}
+.serch-widget{
+    text-align: right;
+}
+
+
+.categori .title{
+    text-align: right;
+}
+.categori .categori-list li a:hover, .categori .categori-list li a.active {
+    padding-left: 0px;
+    padding-right: 5px;
+}
+
+.recent-post-widget .title{
+    text-align: right;
+}
+.recent-post-widget .post-list li .post .post-img {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+.recent-post-widget .post-list li .post{
+    text-align: right;
+}
+
+.blog-aside .categori, .blog-aside .recent-post-widget, .blog-aside .newsletter-widget, .blog-aside .tags{
+    text-align: right;
+}
+.blog .blog-box{
+    text-align: right;
+}
+
+.mainmenu-area .navbar #main_menu .navbar-nav .nav-item .dropdown-menu li{
+    text-align: right;
+}
+.mainmenu-area .navbar #main_menu .navbar-nav .nav-item .dropdown-menu .dropdown-item i {
+    margin-right: 0px;
+    margin-left: 5px;
+    transform: rotate(180deg);
+}
+
+
+.single-acc{
+    text-align: right;
+}
+
+section.about{
+    text-align: right;
+    padding: 70px 0px 100px;
+}
+
+.contact-us .header-area .title{
+    text-align: center;
+}
+
+.contact-us .right-area .contact-info .content{
+    text-align: right;
+}
+
+
+.contact-us .right-area .contact-info .left .icon {
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+.contact-us .right-area .social-links{
+    text-align: right;
+}
+
+.contact-us .left-area .contact-form ul{
+    text-align: right;
+}
+
+.contact-us .left-area .contact-form .captcha-area li i {
+    margin-left: 0px;
+    margin-right: 15px;
+}
+
+.contact-us .left-area .contact-form .submit-btn{
+    display: block;
+    margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
+

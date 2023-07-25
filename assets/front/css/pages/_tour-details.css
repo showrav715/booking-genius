@@ -1,0 +1,13 @@
+/*-----------------------------
+** Tour Details Banner Start
+------------------------------*/
+.tour-details-banner {
+  background: url(../images/tdb.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 300px 0px 0px; }
+
+/*-----------------------------
+** Tour Details Banner End
+------------------------------*/

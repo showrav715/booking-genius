@@ -1,0 +1,681 @@
+@media (max-width: 1366px) {
+  .single-banner .banner-overlay {
+    height: 650px;
+  }
+
+  .banner-active .slick-arrow {
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1199px) {
+  .price-range-field {
+    width: 57px;
+  }
+
+  .tour-top-info .info-content .review-box {
+    bottom: 100%;
+    right: 0px;
+  }
+
+  .tour-details-banner .right-video {
+    bottom: 85px;
+  }
+
+  .tour-top-info .info-content .review-box::before {
+    display: none;
+  }
+
+  .tour-top-info .info-content .review-box .rating {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .tour-top-info .info-content .review-box {
+    height: 82px;
+    border-radius: 3px;
+  }
+
+  .blog .blog-box .details .blog-title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+@media (max-width: 991px) {
+  .main-breadcrumb-area {
+    padding: 150px 0px 40px;
+}
+  .checkout-section .booking-info{
+    margin-top: 30px;
+  }
+  .single-banner {
+    margin-top: 107px;
+  }
+
+  .single-banner .banner-overlay .banner-content .title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .single-banner .banner-overlay .banner-content p {
+    font-weight: 600;
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+
+  .single-banner .banner-overlay {
+    height: 480px;
+  }
+
+  .mainmenu-area .navbar .mybtn1 {
+    margin-left: 15px !important;
+    margin-bottom: 15px;
+    padding: 5px 30px;
+  }
+
+  .mainmenu-area .navbar .navbar-brand img {
+    max-height: 45px;
+  }
+
+  .search-pc {
+    display: none;
+  }
+
+  .navbar-light .navbar-toggler {
+    margin-right: 0px;
+  }
+
+  body {
+    padding-top: 0px;
+  }
+
+  .mainmenu-area .navbar {
+    padding: 7px 0px;
+  }
+
+  .mainmenu-area .navbar #main_menu .navbar-nav .nav-item {
+    display: inline-block;
+  }
+
+  .mainmenu-area .navbar #main_menu .navbar-nav .nav-link {
+    display: inline-block;
+  }
+
+  .mainmenu-area .navbar #main_menu .navbar-nav .nav-link {
+    padding: 12px 10px;
+  }
+
+  .search-phone {
+    position: absolute;
+    top: 19px;
+    right: 50px;
+  }
+
+  .search-phone .serch-icon-area {
+    position: relative;
+    top: auto;
+    right: auto;
+    z-index: 9;
+    display: block;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .search-form-area-mobile {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    z-index: 9999;
+  }
+
+  .search-form-area-mobile input {
+    position: absolute;
+    top: 50%;
+    width: 90%;
+    left: 50%;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    background: none;
+    color: #f1f1f1;
+    border: 0px;
+    padding: 0px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  .search-form-area-mobile input:focus {
+    border: 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  .search-form-area-mobile .off-serch {
+    top: 18px;
+    right: 30px;
+    color: #f1f1f1;
+  }
+
+  .single-feature {
+    margin-bottom: 30px;
+  }
+
+  .feature-area {
+    padding: 50px 0px 20px;
+  }
+
+  .single-blog {
+    margin-bottom: 30px;
+  }
+
+  .mainmenu-area .navbar #main_menu {
+    padding-left: 0px;
+  }
+
+  .hero-area .content .title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .tour-details-banner {
+    padding: 200px 0px 100px;
+  }
+
+  .tour-top-info .info-content .review-box {
+    left: 0px;
+    right: auto;
+  }
+
+  .tour-details-banner .right-video {
+    top: 100%;
+    right: auto;
+    left: 150px;
+    margin-top: 38px;
+    display: block;
+  }
+
+  .video-play-btn {
+    width: 60px;
+    height: 60px;
+    line-height: 58px;
+  }
+
+  .video-play-btn img {
+    width: 30px;
+  }
+
+  .video-play-btn:before {
+    width: 70px;
+    height: 70px;
+  }
+
+  .tour-top-info .info-content .info-box {
+    margin-bottom: 15px;
+  }
+
+  .tour-top-info .info-content {
+    padding: 18px 0px 10px;
+  }
+
+  .tour-details-banner .right-video {
+    margin-top: 27px;
+  }
+
+  .single-details .aside-right {
+    margin-top: 40px;
+  }
+
+  .main-breadcrumb-area .pagetitle {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .vendor-profile-top .t-info-list .review-count,
+  .vendor-profile-top .t-info-list .pack-count,
+  .vendor-profile-top .t-info-list .rating {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .vendor-profile-top .t-info-list .rating i {
+    font-size: 14px;
+    margin-left: -1px;
+    top: -5px;
+  }
+
+  .vendor-profile-top .t-info-list .rating {
+    padding: 8px 11px 4px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  .vendor-profile-top .t-info-list .review-count {
+    margin-right: 10px;
+    padding-right: 20px;
+  }
+
+  .vendor-banner {
+    height: 220px;
+  }
+
+  .single-local-expert .content .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .lx-video .video-box {
+    padding: 130px 0px 130px;
+  }
+
+  .contact-us .right-area {
+    margin-top: 50px;
+  }
+
+  .single-details.hotel .available-rooms .room-option .r-s-option.guests{
+    margin-top: 20px;
+  }
+
+
+
+}
+
+@media (max-width: 767px) {
+  .single-blog .img img {
+    width: 100%;
+  }
+
+  .hero-area .content .search-location {
+    flex-wrap: wrap;
+    border-radius: 7px;
+  }
+
+  .hero-area .content .search-location .my-col1 {
+    -webkit-box-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+    width: 100% !important;
+    border-bottom: 1px solid #e3e3e3;
+  }
+
+  .hero-area .content .search-location .my-col2 {
+    -webkit-box-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+    width: 100% !important;
+  }
+
+  .hero-area .content .search-location .search-btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+  }
+
+  .top-header .content .left-content .email,
+  .top-header .content .right-content .social-link {
+    display: none;
+  }
+
+  .hero-area {
+    padding: 90px 0px 90px;
+  }
+
+  .single-feature .left-area img {
+    width: 50px;
+  }
+
+  .single-feature .left-area {
+    margin-right: 20px;
+  }
+
+  .tour-details-banner .left .title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .vendor-profile-top .t-info-list {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .vendor-profile-top .t-info-list .rating,
+  .vendor-profile-top .t-info-list .review-count,
+  .vendor-profile-top .t-info-list .pack-count {
+    display: inline-block;
+  }
+
+  .vendor-profile-top .t-info-list .rating {
+    position: relative;
+    top: -7px;
+  }
+
+  .vendor-profile-top {
+    padding: 30px 0px 20px;
+  }
+
+
+}
+
+@media (max-width: 575px) {
+  .single-details.hotel .available-rooms .all-rooms .single-room .image {
+    text-align: center;
+}
+  .single-details.hotel .available-rooms .all-rooms .single-room{
+    display: block;
+  }
+  .bottomtotop i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .footer .footer-widget .title {
+    font-size: 22px;
+  }
+
+  .footer-newsletter-widget .social-links .title {
+    font-size: 16px;
+  }
+
+  .hero-area .content .title {
+    font-size: 34px;
+    line-height: 44px;
+  }
+
+  .hero-area .content .sub-title {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .tranding-tour .header-area .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .tour-slider .owl-controls .owl-nav .owl-prev,
+  .tour-slider .owl-controls .owl-nav .owl-next {
+    font-size: 12px;
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    top: -35px;
+  }
+
+  .tour-slider .owl-controls .owl-nav .owl-prev {
+    right: 30px;
+  }
+
+  .all-turs .header-area .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .testimonial .section-heading .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .blog .section-heading .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .footer .footer-widget .title {
+    font-size: 20px;
+  }
+
+  .footer .footer-widget .title {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .top-dastination .header-area .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .single-destination .content .title {
+    font-size: 18px;
+  }
+
+  .testimonial .single-testimonial .people .content .designation {
+    font-size: 14px;
+  }
+
+  .testimonial .single-testimonial .people .content .title {
+    font-size: 18px;
+  }
+
+  .testimonial .single-testimonial .review-text img {
+    bottom: 7px;
+    width: 31px;
+  }
+
+  .testimonial .single-testimonial .review-text {
+    padding: 25px 30px 32px;
+  }
+
+  .testimonial .single-testimonial .review-text p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .top-header .content .left-content .call {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .top-header .content .right-content .language-selector i {
+    font-size: 13px;
+  }
+
+  .top-header .content .right-content .language-selector {
+    margin-right: 0px !important;
+  }
+
+  .tour-top-info .info-content .info-box {
+    text-align: center;
+  }
+
+  .tour-top-info .info-content .info-box .right {
+    flex: unset;
+  }
+
+  .tour-top-info .info-content .info-box {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .review-area .review-list li .single-comment {
+    display: flow-root;
+    text-align: left;
+  }
+
+  .review-area .review-list li .single-comment .left-area {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .review-area .review-list li .single-comment .left-area::before {
+    display: none;
+  }
+
+  .aside-right .organize-by .organizer-profile .left img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .aside-right .price-area p {
+    font-size: 34px;
+    line-height: 43px;
+  }
+
+  .overview-area .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .map-location-area .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .tour-faq-area .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .review-area .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .review-area .review-list li .single-comment .right-area .header-area .title {
+    font-size: 14px;
+  }
+
+
+  .blog .blog-box .details .blog-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .comment-area .top-header-area .title {
+    font-size: 20px;
+  }
+
+  .single-details .vendor-info-area .title,
+  .review-area .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .single-how-it-work .content .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+
+
+
+}
+
+
+
+@media (max-width: 414px) {
+  .single-banner .banner-overlay .banner-content .title {
+    font-size: 28px;
+    line-height: 38px;
+}
+  .footer .footer-widget .title {
+    font-size: 21px;
+  }
+
+  .hero-area .content .title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .hero-area .content .sub-title {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .review-area .review-list li .single-comment {
+    display: flow-root;
+  }
+
+  .review-area .review-list li .single-comment .left-area {
+    text-align: left;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+
+  .review-area .review-list li .single-comment .left-area::before {
+    display: none;
+  }
+
+  /* Comment Area Css Start */
+  .comment-area .all-comment li .single-comment {
+    display: flow-root;
+  }
+
+  .comment-area .all-comment li .single-comment .left-area {
+    text-align: left;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+
+  .comment-area .all-comment li .single-comment .left-area::before {
+    display: none;
+  }
+
+  .comment-area .all-comment li .replay-area {
+    position: relative;
+    padding-left: 00px;
+    margin-bottom: 20px;
+  }
+
+  .comment-area .all-comment li .replay-review {
+    margin-left: 30px;
+  }
+
+  /* Comment Area Css End */
+  .vendor-banner {
+    height: 150px;
+  }
+
+  .vendor-profile-top .organize-by .organizer-profile .left img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .vendor-profile-top .t-info-list .review-count,
+  .vendor-profile-top .t-info-list .pack-count,
+  .vendor-profile-top .t-info-list .rating {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .vendor-profile-top .t-info-list .review-count {
+    margin-right: 5px;
+    padding-right: 15px;
+  }
+
+
+
+
+
+
+
+
+}
+
+@media (max-width: 390px) {}

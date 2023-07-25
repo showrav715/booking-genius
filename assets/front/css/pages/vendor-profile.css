@@ -1,0 +1,13 @@
+/*-------------------------------
+Vendor Banner start
+--------------------------------*/
+.vendor-banner {
+  background: url(../images/vendor-profile-bg.png);
+  height: 350px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+/*-------------------------------
+Vendor Banner End
+--------------------------------*/

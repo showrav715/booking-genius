@@ -1,0 +1,231 @@
+/*-----------------------------
+** Footer Area Start
+------------------------------*/
+
+.footer{
+  overflow: hidden;
+  position: relative;
+  padding: 70px 0px 0px;
+  background: #012d76;
+  .footer-logo{
+    margin-top: -0px;
+  }
+  .footer-widget{
+    .title{
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    ul{
+      padding-left: 0px;
+      margin-bottom: 0px;
+      li{
+        list-style: none;
+        a{
+          transition: $transition;
+          color: #fff;
+          &:hover{
+            color: $base-color2;
+          }
+        }
+        i{
+          font-size: 12px;
+          padding-right: 4px;
+        }
+      }
+    }
+  }
+
+.fotter-social-links{
+  ul{
+    padding-left: 0px;
+    margin-left: 0px;
+    li{
+      display: inline-block;
+      a{
+        font-size: 14x;
+        width: 38px;
+        height: 38px;
+        display: inline-block;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 35px;
+        margin: 0px 3px;
+        padding: 0px;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: $transition;    
+          &:hover{
+          background: #fff;
+          color: $base-color;
+          }
+      }
+      &:first-child{
+        margin-left: 0px;
+      }
+    }
+  }
+}
+  .copy-bg{
+    background: #012d76;
+    margin-top: 45px;
+    padding: 20px 15px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.40);
+    .content{
+      text-align: center;
+      .content{
+        p{
+          font-size: 16px;
+          line-height: 26px;
+          margin-bottom: 0px;
+          color: #fff;
+        a{
+          font-size: 16px;
+          line-height: 26px;
+          margin-bottom: 0px;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  }
+}
+.about-widget{
+  .footer-logo{
+    margin-bottom: 22px;
+  }
+  .text{
+    margin-bottom: -2px;
+    p{
+    font-size: 16px;
+    color: #fff;
+    }
+  }
+
+
+}
+.address-widget{
+  .title{
+    margin-bottom: 25px;
+  }
+  .about-info{
+    li{
+      margin-bottom: 15px;
+      p{
+        position: relative;
+        padding-left: 50px;
+        margin-bottom: 0px;
+        color: #fff;
+        i{
+          position: absolute;
+          left: 0;
+          font-size: 14px;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 33px;
+          padding: 0px;
+          text-align: center;
+          color: #fff;
+          padding-left: 2px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          transition: $transition;
+          display: inline-block;
+        }
+      }
+      &:hover{
+        i{
+          background: #fff;
+          color: $base-color;
+        }
+      }
+      &::last-child{
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+.info-link-widget{
+  .title{
+    margin-bottom: 11px;
+  }
+  .link-list{
+    li{
+      padding: 8px 0;
+      display: block;
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.50);
+      a{
+        font-size: 16px;
+        line-height: 26px;
+        transition: $transition;
+        display: flex;
+        justify-content: space-between;
+        &:hover{
+          color: $base-color2;
+        }
+      }
+      i.fas{
+        font-size: 14px;
+      }
+      &:last-child{
+        border-bottom: 0px;
+      }
+    }
+  }
+}
+
+.footer-newsletter-widget{
+  .title{
+    margin-bottom: 25px;
+  }
+  .newsletter-form-area{
+    position: relative;
+    input{
+      width: 100%;
+      height: 50px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 0px 20px;
+      background: none;
+      color: #fff;
+    }
+    button{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      border: 0px;
+      color: #fff;
+      background: $base-color;
+      font-size: 16px;
+      text-transform: uppercase;
+      transition: $transition;
+      &:focus{
+        outline: 0px;
+      }
+    }
+  }
+  .social-links{
+    margin-top: 20px;
+    margin-bottom: 23px;
+    .title{
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: inherit;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+/*-----------------------------
+** Footer Area End
+------------------------------*/

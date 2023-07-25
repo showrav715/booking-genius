@@ -1,0 +1,177 @@
+
+/*---------------------------
+** Contact Us  Area Start
+---------------------------*/
+
+.contact-us{
+  padding: 70px 0px 70px;
+  .header-area{
+    text-align: center;
+    margin-bottom: 28px;
+    .title{
+      font-size: 28px;
+      line-height: 38px;
+      font-weight: 700;
+    }
+  }
+
+  .left-area{
+    background: #fff;
+    .contact-form{
+      padding: 20px 30px 30px;
+      box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      ul{
+        padding-left: 0px;
+        margin-bottom: 0px;
+        li{
+          list-style: none;
+          .input-field{
+            margin-bottom: 20px;
+            background: none;
+            border-radius: 0px;
+            border: 0px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            &:focus{
+              border: 0px !important;
+              border-bottom: 1px solid $base-color!important;
+            }
+            &.textarea{
+              margin-bottom: 15px;
+            }
+          }
+          
+        }
+      }
+      .captcha-area{
+        li{
+          p{
+            margin-bottom: 0px;
+          }
+          img{
+            max-width: 180px;
+            display: inline-block;
+          }
+          i{
+            display: inline-block;
+            margin-left: 15px;
+            font-size: 22px;
+            color: #777;
+          }
+          .input-field{
+            margin-bottom: 15px;
+            background: none;
+            max-width: 225px;
+            border-radius: 0px;
+            border: 0px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            &:focus{
+              border: 0px !important;
+              border-bottom: 1px solid $base-color!important;
+            }
+          }
+        }
+      }
+      .submit-btn{
+        width: 180px;
+        height: 50px;
+        padding: 0px;
+        background: $base-color;
+        color: #fff;
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center;
+        border: 0px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: $transition;
+        &:hover{
+          border: 1px solid $base-color;
+          background: #fff;
+          color: $base-color;
+        }
+      }
+    }
+  }
+  .right-area{
+    .contact-info{
+      margin-bottom: 20px;
+      transition: $transition;
+      display: flex;
+      background: #fff;
+      overflow: hidden;
+      .left{
+        position: relative;
+        align-self: center;
+        .icon{  
+          align-self: center;
+          width: 50px;
+          text-align: center;
+          margin-right: 20px;
+          transition: $transition;
+          z-index: 9;
+          text-align: center;
+          display: block;
+          img{
+            display: inline-block;
+          }
+        }
+      }
+      
+      .content{
+        flex: 1;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 15px;
+        .title{
+          font-size: 22px;
+          line-height: 34px;
+          font-weight: 600;
+          display: block;
+        }
+        a{
+          display: block;
+          margin-bottom: 0px;
+        }
+      }
+
+    }
+    .social-links{
+      padding-top: 20px;
+      .title{
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 600;
+        color: $heading-color;
+        margin-top: -5px;
+        margin-bottom: 18px;
+      }
+      ul{
+        padding-left: 0px;
+        margin-bottom: 0px;
+        li{
+          display: inline-block;
+          a{
+            font-size: 16px;
+            width: 35px;
+            height: 35px;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            margin: 0px 3px;
+            background: #f1f4fb;
+            color: $base-color;
+            @include transition();       
+             &:hover{
+              background: $base-color;
+              color: #fff;
+             }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+

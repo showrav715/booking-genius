@@ -1,0 +1,842 @@
+/*-------------------------------
+  Hero  Area CSS Start
+--------------------------------*/
+.hero-area {
+	padding: 149px 0px 160px;
+	background: url(../images/bigbanner.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	.content{
+		text-align: center;
+		.title{
+			font-size: 50px;
+			line-height: 60px;
+			color: #fff;
+			font-weight: 700;
+		}
+		.sub-title{
+			font-size: 20px;
+			line-height: 30px;
+			font-weight: 600;
+			color: #fff;
+		}
+		.search-location{
+			background: #fff;
+			margin-top: 30px;
+			padding: 5px;
+			display: flex;
+			border-radius: 100px;
+			.my-col1{
+				flex: 40%;
+				width: 40%!important;
+				position: relative;
+				i{
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					z-index: 9;
+					left: 10px;
+					font-size: 26px;
+					color: #777;
+				}
+
+			}
+			.my-col2{
+				flex: 40%;
+				width: 40%!important;
+				position: relative;
+				i{
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					z-index: 9;
+					left: 10px;
+					font-size: 26px;
+					color: #777;
+				}
+			}
+			.my-col3{
+				flex: 20%;
+				width: 20%!important;
+			}
+			.date-range{
+				width: 100%;
+				height: 50px;
+				padding: 0px 30px 0px 50px;
+				border-radius: 50px;
+				border: 0px;
+			}
+			.search-btn{
+				width: 100%;
+				height: 50px ;
+				background: $base-color;
+				border: 1px solid $base-color;
+				color: #fff;
+				border-radius: 50px;
+				transition: $transition;
+				i{
+					font-size: 14px;
+					margin-right: 7px;
+				}
+				&:focus{
+					outline: 0px;
+					box-shadow: unset;
+				}
+				&:hover{
+					background: none;
+					color: $base-color;
+				}
+			}
+		}
+	}
+}
+span.select2.select2-container.select2-container--default.select2-container--above.select2-container--focus,
+.select2-container
+ {
+	width: 100%!important;
+	border: 0px;
+}
+.select2-container .select2-selection--single {
+	height: 50px;
+	text-align: left;
+	border-radius: 50px;
+	padding: 0px 30px 0px 45px;
+	border: 0px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 50px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+	height: 50px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered:focus,
+.select2-container .select2-selection--single:focus
+{
+	outline: 0px;
+	box-shadow: unset;
+	border: 0px;
+}
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, 
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+    border-radius: 25px;
+}
+/*-------------------------------
+  Hero  Area CSS End
+--------------------------------*/
+
+/*-------------------------------
+Feature Area Start
+--------------------------------*/
+.feature-area{
+	padding: 50px 0px 50px;
+}
+.single-feature{
+	display: flex;
+	.left-area{
+		margin-right: 30px;
+		align-self: center;
+		img{
+			width: 70px;
+		}
+	}
+	.right-area{
+		flex: 1;
+		.title{
+			font-size: 16px;
+			line-height: 26px;
+			font-weight: 700;
+			margin-bottom: 0px;
+		}
+		.text{
+			margin-bottom: 0px;
+		}
+	}
+}
+
+/*-------------------------------
+Feature Area End
+--------------------------------*/
+
+/*-------------------------------
+Trending Tour Area Start
+--------------------------------*/
+.tranding-tour{
+	padding: 62px 0px 70px;
+	background: url(../images/tt-bg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	.header-area{
+		margin-bottom: 22px;
+		.title{
+			font-size: 28px;
+			line-height: 38px;
+			font-weight: 600;
+		}
+	}
+}
+.tour-slider{
+	position: relative;
+		.owl-controls{
+		  .owl-nav{
+			  .owl-prev,
+			  .owl-next
+			  {
+				  font-size: 14px;
+				  position: absolute;
+				  transform: translateY(-50%);
+				  text-align: center;
+				  line-height: 30px;
+				  width: 30px;
+				  height: 30px;
+				  top: -30px;
+				  line-height: 30px;
+				  opacity: 1;
+				  background: #fff;
+				  color: rgba(0, 0, 0, 0.50);
+				  border-radius: 50%;
+				  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+				  @include transition;
+				  &:hover{
+					  background: #e4f8ff;
+				  }
+			  }
+			  .owl-prev{
+				  right: 40px;
+			  }
+			  .owl-next{
+				  right: 0%;
+			  }
+		  }
+	  }
+}
+
+.single-tours{
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	display: block;
+	transition: $transition;
+	.img-area{
+		position: relative;
+		overflow: hidden;
+		img{
+			width: 100%;
+			transition: $transition;
+		}
+		.discount{
+			position: absolute;
+			font-size: 14px;
+			color: #fff;
+			background: $base-color2;
+			height: 20px;
+			width: 100px;
+			left: -25px;
+			top: 10px;
+			text-align: center;
+			transform: rotate(-35deg);
+			z-index: 3;
+		}
+		.feature{
+			top: 20px;
+			position: absolute;
+			padding: 0px 10px 0px 20px;
+			border-radius: 50px 0px 0px 50px;
+			right: 0px;
+			font-size: 14px;
+			color: #fff;
+			background: $base-color;
+			height: 20px;
+			z-index: 3; 
+		}
+	}
+	.content{
+		padding: 20px 20px 10px;
+		position: relative;
+		.add-favotite{
+			position: absolute;
+			right: 20px;
+			top: -15px;
+			width: 30px;
+			height: 30px;
+			line-height: 28px;
+			text-align: center;
+			font-size: 14px;
+			color: #fff;
+			background: $base-color2;
+			border-radius: 50%;
+			border: 2px solid #fff;
+		}
+		.country{
+			font-size: 13px;
+			margin-bottom: 5px;
+			i{
+				font-size: 10px;
+				margin-right: 5px;
+			}
+		}
+		.title{
+			font-size: 16px;
+			font-weight: 600;
+			margin-bottom: 4px;
+		}
+		.review-area{
+			display: flex;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+			padding-top: 0px;
+			.stars{
+				margin-right: 15px;
+				li{
+					display: inline-block;
+					font-size: 12px;
+					margin-right: -4px;
+					color: $base-color2;
+				}
+			}
+			.review{
+				font-size: 14px;
+				position: relative;
+				top: 3px;
+				color: $body-color;
+			}
+		}
+		.price-area-wrapper{
+			display: flex;
+			justify-content: space-between;
+			.left-area{
+				display: flex;
+				.icon{
+					color: $base-color2;
+					margin-right: 10px;
+				}
+				.price{
+					flex: 1;
+					font-size: 16px;
+					line-height: 18px;
+					font-weight: 600;
+					margin-bottom: 0px;
+					color: $heading-color;
+					small{
+						display: block;
+						font-size: 10px;
+						line-height: 12px;
+						color: $base-color2;
+					}
+				}
+			}
+		}
+	}
+	&:hover{
+		transform: translateY(-5px);
+		.img-area{
+			img{
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+.time-counter {
+	margin-top: 0px;
+	display: block;
+}
+.time-counter span {
+	display: inline-block;
+	margin-right: 3px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 18px;
+	color: #2a3a57; 
+	margin-bottom: 0px;
+}
+.time-counter span:last-child {
+margin-right: 0px; }
+.time-counter span small {
+display: block;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+color: #ff431e; 
+}
+/*-------------------------------
+Trending Tour Area End
+--------------------------------*/
+
+/*-------------------------------
+Top Dastination Area start
+--------------------------------*/
+.top-dastination{
+	padding: 62px 0px 40px;
+	
+	.header-area{
+		margin-bottom: 22px;
+		.title{
+			font-size: 28px;
+			line-height: 38px;
+			font-weight: 600;
+		}
+	}
+}
+.single-destination{
+	position: relative;
+	overflow: hidden;
+	display: block;
+	transition: $transition;
+	margin-bottom: 30px;
+	img{
+		width: 100%;
+	}
+	.overlay{
+		position: absolute;   
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0.1) 90%, rgba(0, 0, 0, 0) 100%);
+		opacity: 0.8;
+		transition: $transition;
+	}
+	.content{
+		position: absolute;   
+		bottom: -10px;
+		width: 100%;
+		text-align: center; 
+		transition: $transition;
+		.title{
+			font-size: 20px;
+			color: #fff;
+			font-weight: 600;
+		}
+		.tour-count{
+			background: $base-color;
+			display: inline-block;
+			color: #fff;
+			font-size: 14px;
+			padding: 5px 18px;
+			border-radius: 50px;
+			opacity: 0;
+		}
+	}
+	&:hover{
+		.overlay{
+			background-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0.1) 90%, rgba(0, 0, 0, 0) 100%);
+			opacity: 1;
+		}
+		.content{
+			bottom: 20px;
+			.tour-count{
+				opacity: 1;
+				transition: $transition;
+			}
+		}
+	}
+}
+
+/*-------------------------------
+Top Dastination Area End
+--------------------------------*/
+ 
+/*-------------------------------
+all turs area Start
+--------------------------------*/
+.all-turs{
+	background: #f8f9fb;
+	padding: 62px 0px 40px;
+	.header-area{
+		margin-bottom: 22px;
+		.title{
+			font-size: 28px;
+			line-height: 38px;
+			font-weight: 600;
+		}
+	}
+	.single-tours{
+		margin-bottom: 30px;
+		display: block;
+	}
+}
+
+
+/*-------------------------------
+all turs area End
+--------------------------------*/
+
+
+/*-------------------------------
+  Testimonial Area CSS Start
+--------------------------------*/
+.testimonial{
+	padding: 62px 0px 65px;
+	position: relative;
+	background: url(../images/testimonialbg.png);
+	.section-heading{
+	  margin-bottom: 22px;
+	  text-align: left;
+	  .title{
+		font-size: 28px;
+		font-weight: 38px;
+		font-weight: 600;
+		color: #fff;
+	  }
+	  .text{
+		font-size: 16px;
+		font-weight: 26px;
+		font-weight: 600;
+		color: #fff;
+	  }
+	}
+	.single-testimonial{
+	  .review-text{
+		background: #fff;
+		padding: 25px 30px 50px;
+		position: relative;
+		p{
+		  margin-bottom: 0px;
+		  color: #050e33;
+		  font-size: 18px;
+		  line-height: 28px;
+		}
+		img{
+			position: absolute;
+			width: auto;
+			right: 10px;
+			bottom: 10px;
+		}
+	  }
+	  .people{
+		margin-top: 30px;
+		display: flex;
+		.img{
+		  display: inline-block;
+		  img{
+			width: 65px;
+			height: 65px;
+			border-radius: 50%;
+			margin-right: 20px;
+			
+		  }
+		}
+		.content{
+			flex: 1;
+			.title{
+				font-size: 20px;
+				font-weight: 600;
+				line-height: 34px;
+				color: #fff;
+				margin-bottom: 0px;
+			  }
+			  .designation{
+				font-size: 16px;
+				line-height: 20px;
+				color: #f7f7f7;
+				margin-bottom: 0px;
+			  }
+		}
+	  }
+	}
+	.owl-controls{
+		position: relative;
+		  .owl-dots{
+			text-align: center;
+			margin-top: 40px;
+			  .owl-dot{
+				  width: 15px;
+				  height: 15px;
+				  background: #ddd;
+				  display: inline-block;
+				  border-radius: 50%;
+				  margin: 0px 3px 0px;
+				  @include transition;
+				  &.active{
+					  background: $base-color;
+					  transform: scale(1.1);
+				  }
+			  }
+		  }
+	  }
+ }
+  /*-------------------------------
+	Testimonial Area CSS End
+  --------------------------------*/
+  
+  
+/*-------------------------------
+Blog Area CSS Start
+--------------------------------*/
+	.blog {
+		padding: 65px 0px 65px;
+		background: #f8f9fb;
+
+		.section-heading{
+			margin-bottom: 22px;
+			text-align: left;
+			.title{
+			  font-size: 28px;
+			  font-weight: 38px;
+			  font-weight: 600;
+			}
+			.text{
+			  font-size: 16px;
+			  font-weight: 26px;
+			  font-weight: 600;
+			}
+		  }
+		  .view-all-btn{
+			  display: inline-block;
+			  margin-top: 20px;
+			  font-size: 14px;
+			  color: #777;
+			  text-decoration: underline;
+		  }
+	}
+
+	.single-blog {
+		background: #fff;
+		display: block;
+		box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+		border-radius: 10px;
+		margin-left: 15px;
+		transition: $transition;
+		.img{
+			position: relative;
+			top: 15px;
+			left: -15px;
+			border-radius: 10px;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+			&::before{
+				position: absolute;
+				content: "";
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.3);
+				border-radius: 10px;
+				transition: $transition;
+			}
+			img{
+				border-radius: 10px;
+			}
+		}
+
+		.content {
+			padding: 23px 15px 11px;
+
+			.title {
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 22px;
+				margin-bottom: 8px;
+				transition: $transition;
+				color: $heading-color;
+			}
+			.text{
+				p{
+					font-size: 14px;
+					margin-bottom: 2px;
+				}
+			}
+			.top-meta {
+				margin-bottom: 0px;
+
+				li {
+					display: inline-block;
+					margin-right: 10px;
+
+					span {
+						font-size: 14px;
+						color: $body-color;
+						margin-bottom: 0px;
+
+						i {
+							color: $base-color;
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+		&:hover{
+			transform: translateY(-7px);
+			.img{
+				&::before{
+					background: rgba(0, 0, 0, 0.0);
+				}
+			}
+		}
+	}
+
+/*-------------------------------
+Blog Area CSS End
+--------------------------------*/
+
+  
+  
+  
+  /*---------------------------
+  ** LOgin Signup  Area Start
+  ---------------------------*/
+  
+  .login-signup{
+	padding: 60px 0px 60px;
+  }
+  .login-area{
+	padding: 30px 30px 39px;
+	background: #fff;
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.10);
+	.header-area{
+	  text-align: center;
+	  margin-bottom: 40px;
+	  .title{
+		font-size: 30px;
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: 40px;
+		color: $base-color;
+  
+	  }
+	  .text{
+		font-size: 18px;
+		color: #919191;
+	  }
+	}
+	.form-input{
+	  position: relative;
+	  margin-bottom: 15px;
+	  input{
+		width: 100%;
+		height: 50px;
+		background: #f3f8fc;
+		padding: 0px 30px 0px 45px;
+		border: 1px solid rgba(0, 0, 0, 0.10);
+		font-size: 14px;
+	  }
+	  i{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 15px;
+		color: $base-color;
+	  }
+  }
+  .form-forgot-pass{
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+  }
+  .to-login-page{
+	text-align: right;
+  }
+  .submit-btn{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	background: $base-color;
+	border: 0px;
+	color: #fff;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 20px;
+	transition: $transition;
+	cursor: pointer;
+	&:hover{
+	  background: $base-color2;
+	}
+  }
+  .social-area{
+	text-align: center;
+	padding-top: 26px;
+	.title{
+	  font-size: 20px;
+	  text-transform: uppercase;
+	  font-weight: 600;
+	  display: inline-block;
+	  color: $base-color;
+	  position: relative;
+	  &::after{
+		position: absolute;;
+		content: '';
+		width: 40px;
+		height: 1px;
+		background:  rgba(0, 0, 0, 0.2);
+		top: 50%;
+		transform: translateY(-50%);
+		right: 100%;
+		margin-right: 7px;
+	  }
+	  &::before{
+		position: absolute;;
+		content: '';
+		width: 40px;
+		height: 1px;
+		background: rgba(0, 0, 0, 0.2);
+		top: 50%;
+		transform: translateY(-50%);
+		left: 100%;
+		margin-left: 7px;
+	  }
+	}
+	.text{
+	  font-size: 20px;
+	  font-weight: 300;
+	  color: $base-color2;
+	}
+	.social-links{
+	  padding-left: 0px;
+	  li{
+		display: inline-block;
+		a i{
+		  width: 50px;
+		  height: 50px;
+		  border-radius: 50%;
+		  line-height: 50px;
+		  display: inline-block;
+		  color: #fff;
+		  margin: 0px 5px;
+		  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+		  &.fa-facebook-f{
+			background: $facebook
+		  }
+		  &.fa-twitter{
+			background: $twitter;
+		  }
+		  &.fa-google-plus-g{
+			background: $google-plus;
+		  }
+	   }
+	  }
+	}
+  }
+  }
+  
+  .comment-log-reg-tabmenu{
+	.full-container{
+	  padding: 0px!important;
+	}
+	.nav-tabs{
+	  border: 0px;
+	  margin: 0px;
+	  padding: 0px;
+	  .nav-link{
+		border: 0px;
+		margin: 0px;
+		padding: 10px 0px;
+		width: 50%;
+		text-align: center;
+		background: $base-color;
+		border-radius: 0px;
+		color: #fff;
+		&.active{
+		  background: #262e3b;
+		}
+	  }
+	}
+  }
+   /*---------------------------
+  ** LOgin Signup  Area End
+  ---------------------------*/
+
+
+
