@@ -10,8 +10,6 @@
   </div>
 
 
-
-  
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
       <a class="nav-link active" id="pills-tone-tab" data-toggle="pill" href="#pills-tone" role="tab" aria-controls="pills-tone" aria-selected="true">
