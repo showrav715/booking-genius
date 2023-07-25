@@ -40,7 +40,7 @@ jobs:
           echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
 
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4/
+        uses: SamKirkland/FTP-Deploy-Action@main
 
         with:
           server: ${{ secrets.FTP_SERVER }}
