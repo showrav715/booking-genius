@@ -15,19 +15,16 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
         with:
-          php-version: '8.1'
+          php-version: "8.1"
           # i need cd project folder and install composer
-        
+
       - name: Install dependencies
         run: composer update --prefer-dist --no-progress --no-suggest
         working-directory: project
 
-     
-
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
         working-directory: project
-
 
       - name: Set up environment variables in .env existing file
         run: |
@@ -48,4 +45,3 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           passive: true
-          

@@ -105,8 +105,7 @@ class SpaceMercadopagoController extends Controller
             $order['order_number'] = Str::random(4).time();
             $order['payment_status'] = "Pending";
             $order['order_status'] = "Pending";
-  
-            $order['txnid'] = $request->transaction_id;
+            $order['txnid'] = $payment->id;
             $order['charge_id'] = '';
             $order['user_id'] = Auth::user()->id;
              

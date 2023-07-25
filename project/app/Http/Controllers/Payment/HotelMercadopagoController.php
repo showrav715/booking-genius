@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Payment;
+
 use App\Classes\BookingMail;
 use App\Helpers\OrderHelper;
 use App\Helpers\PriceHelper;
@@ -25,13 +26,13 @@ class HotelMercadopagoController extends Controller
 
 
         $user = Auth::user();
-        if(Session::has('book')){
+        if (Session::has('book')) {
             $book = Session::get('book');
-            
-            if($book['hotel']['author_id'] == $user->id && $book['hotel']['author_type'] == 'user'){
-                return back()->with('error','This is your Hotel');
+
+            if ($book['hotel']['author_id'] == $user->id && $book['hotel']['author_type'] == 'user') {
+                return back()->with('error', 'This is your Hotel');
             }
-        }else{
+        } else {
             return view('errors.404');
         }
 
@@ -46,15 +47,15 @@ class HotelMercadopagoController extends Controller
         ]);
 
         $supported = [
-            'BRL','USD',
+            'BRL', 'USD',
         ];
 
-        if(!in_array($request->currency_code,$supported)){
-            return redirect()->route('hotel.checkout')->with('error','This currency not supported paypal checkout');
+        if (!in_array($request->currency_code, $supported)) {
+            return redirect()->route('hotel.checkout')->with('error', 'This currency not supported paypal checkout');
         }
 
-        if(!$user){
-            Session::put('url',route('hotel.checkout'));
+        if (!$user) {
+            Session::put('url', route('hotel.checkout'));
             return redirect(route('user.login'));
         }
 
@@ -62,12 +63,12 @@ class HotelMercadopagoController extends Controller
 
         MercadoPago\SDK::setAccessToken($paydata['token']);
         $payment = new MercadoPago\Payment();
-        $payment->transaction_amount = (string)round($book['total'],2);
+        $payment->transaction_amount = (string)round($book['total'], 2);
         $payment->token = $request->token;
         $payment->description = 'Mercadopago Order';
         $payment->installments = 1;
         $payment->payer = array(
-          "email" => $request->email,
+            "email" => $request->email,
         );
         $payment->save();
 
@@ -91,25 +92,25 @@ class HotelMercadopagoController extends Controller
                 $order['night'] = $book['night'];
                 $order['adult'] = $book['adult'];
                 $order['children'] = $book['children'];
-        
-              
-                if(!empty($book['fac_price'])){
-                    $order['extra_price'] = implode(',', $book['fac_price']) ;
-                    $order['extra_name'] = implode(',', $book['fac_name']) ;
-                    $order['extra_type'] = implode(',', $book['fac_type']) ;
+
+
+                if (!empty($book['fac_price'])) {
+                    $order['extra_price'] = implode(',', $book['fac_price']);
+                    $order['extra_name'] = implode(',', $book['fac_name']);
+                    $order['extra_type'] = implode(',', $book['fac_type']);
                 }
-        
-        
-                $curr = Currency::where('name',$request->currency_code)->first();
+
+
+                $curr = Currency::where('name', $request->currency_code)->first();
                 $order['currency_code'] = $curr->name;
                 $order['currency_value'] = $curr->value;
                 $order['currency_sign'] = $curr->sign;
-             
+
                 $order['service_charge'] = PriceHelper::storePrice($book['service_fee']);
                 $order['total'] = $book['total'];
                 $order['item_id'] = $book['hotel']['id'];
                 $order['method'] = 'Mercadopago';
-                $order['order_number'] = Str::random(4).time();
+                $order['order_number'] = Str::random(4) . time();
                 $order['payment_status'] = "Complete";
                 $order['order_status'] = "Pending";
                 $order['currency_code'] = $curr->name;
@@ -120,11 +121,11 @@ class HotelMercadopagoController extends Controller
                 $order['user_id'] = Auth::user()->id;
                 $order['author_id'] = $book['hotel']['author_id'];
                 $order['author_type'] = $book['hotel']['author_type'];
-                 
+
                 $order->save();
-        
+
                 $id = $order->id;
-                foreach($book['rooms'] as $key => $room){
+                foreach ($book['rooms'] as $key => $room) {
                     $in['user_id'] = Auth::user()->id;
                     $in['order_id'] = $id;
                     $in['hotel_id'] = $book['hotel']['id'];
@@ -134,24 +135,22 @@ class HotelMercadopagoController extends Controller
                     $in['square_fit'] = $room->square_fit;
                     $in['bed'] = $room->bed;
                     $in['per_night_cost'] = $room->per_night_cost;
-        
+
                     $item = new HotelOrderItem();
                     $item->create($in);
                 }
-        
-                OrderHelper::vendorOrder($book,'hotel');
-                // email and notification 
-                BookingMail::Booking($order->id,'Hotel',$book['total'],$order->order_number,$request->name,$request->email);
-                Session::forget('book'); 
-                return redirect(route('front.success'));
 
+                OrderHelper::vendorOrder($book, 'hotel');
+                // email and notification 
+                BookingMail::Booking($order->id, 'Hotel', $book['total'], $order->order_number, $request->name, $request->email);
+                Session::forget('book');
+                return redirect(route('front.success'));
             } catch (\Throwable $th) {
-                Session::flash('error','Payment Faield');
+                Session::flash('error', 'Payment Faield');
                 return redirect($cancel_url);
             }
-        } 
-        Session::flash('error','Payment Faield');
+        }
+        Session::flash('error', 'Payment Faield');
         return redirect($cancel_url);
     }
-
 }

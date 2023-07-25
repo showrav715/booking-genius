@@ -576,7 +576,7 @@ Route::group(['middleware' => 'permissions:Payment Settings Section'], function 
 
 
 Route::group(['middleware' => 'permissions:Withdraw'], function () {
-    Route::get('/withdraw/methods/datatables', [WithdrawController::class, 'datatables'])->name('admin-withdraw-datatables');
+    Route::get('/withdraw/datatables', [WithdrawController::class, 'datatables'])->name('admin-withdraw-datatables');
     Route::get('/withdraws', [WithdrawController::class, 'index'])->name('admin-withdraw-index');
     Route::get('/withdraw/status/{id}/{status}', [WithdrawController::class, 'status'])->name('admin-withdraw-status');
 });

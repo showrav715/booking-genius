@@ -211,7 +211,7 @@
                                 <div id="cardNumber"></div>
                                 <div id="expirationDate"></div>
                                 <div id="securityCode"> </div>
-                                <input type="text" name="token" value="" id="token">
+                                <input type="hidden" name="token" value="" id="token">
 
                                 <div class="form-group pb-2">
                                     <input class="form-control" type="text" id="cardholderName"

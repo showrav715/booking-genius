@@ -187,65 +187,25 @@
                                     </div>
 
                                     <div class="col-lg-12 d-none mercadapago-show">
-                                        <div class="border p-3 mt-3">
-                                            <div class="row ">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="card_number">{{__('Card Number')}}</label>
-                                                        <input type="text" class="form-control " id="cardNumber" data-checkout="cardNumber" onselectstart="return false" autocomplete="off" >
-                                                        <span id="errCard" class="text-danger"></span>
-                                                        
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="cardCVC">{{__('Cvc')}}</label>
-                                                        <input type="text" class="form-control " id="securityCode" data-checkout="securityCode" placeholder="{{ __('Security Code') }}" onselectstart="return false" autocomplete="off"  >
-                                                        <span id="errCVC text-danger"></span>
-                                                       
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="">{{__('Month')}}</label>
-                                                        <input type="text" class="form-control " id="cardExpirationMonth" data-checkout="cardExpirationMonth" placeholder="{{ __('Expiration Month') }}" autocomplete="off" >
-                                                        
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="">{{__('Year')}}</label>
-                                                        <input type="text" class="form-control "id="cardExpirationYear" data-checkout="cardExpirationYear" placeholder="{{ __('Expiration Year') }}" autocomplete="off" >
-                                                        
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="">{{__('Card Name')}}</label>
-                                                        <input type="text" class="form-control " id="cardholderName" data-checkout="cardholderName" placeholder="{{ __('Card Holder Name') }}" >
-                                                       
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="docType" id="dc-label">{{ __('Document type') }}</label>
-                                                        <select class="form-control" id="docType" data-checkout="docType" >
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="">{{__('Document Number')}}</label>
-                                                        <input type="text" class="form-control " id="docNumber" data-checkout="docNumber" placeholder="{{ __('Document Number') }}" >
-                                                        
-                                                    </div>
-                                                </div>
 
-                                                <input type="hidden" id="installments" value="1"/>
-                                                <input type="hidden" name="amount" id="amount"/>
-                                                <input type="hidden" name="description"/>
-                                                <input type="hidden" name="paymentMethodId" />
-                                            </div>
+                                        <div id="cardNumber"></div>
+                                        <div id="expirationDate"></div>
+                                        <div id="securityCode"> </div>
+                                        <input type="hidden" name="token" value="" id="token">
+        
+                                        <div class="form-group pb-2">
+                                            <input class="form-control" type="text" id="cardholderName"
+                                                data-checkout="cardholderName" placeholder="{{ __('Card Holder Name') }}"
+                                                required />
+                                        </div>
+                                        <div class="form-group py-2">
+                                            <input class="form-control" type="text" id="docNumber" data-checkout="docNumber"
+                                                placeholder="{{ __('Document Number') }}" required />
+                                        </div>
+        
+                                        <div class="form-group py-2">
+                                            <select id="docType" class="form-control ttt" name="docType" data-checkout="docType"
+                                                type="text"></select>
                                         </div>
                                     </div>
 
@@ -359,7 +319,7 @@
 @section('script')
 <script src="https://js.stripe.com/v2/"></script>
 <script src="{{asset('assets/front/js/car/index.js')}}"></script>
-<script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+<script src="https://sdk.mercadopago.com/js/v2"></script>
 <script src="https://js.paystack.co/v1/inline.js"></script>
 
 <script>

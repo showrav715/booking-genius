@@ -148,136 +148,133 @@ $(function ($) {
 		
 function checkMercadopago(value) {
 	if (value == 1) {
-		$('.mercadapago-show').removeClass('d-none');
-		$('.mercadapago-show select#docType').prop('required', true);
+	  $(".mercadapago-show").removeClass("d-none");
+	  $(".mercadapago-show select#docType").prop("required", true);
 
-		window.Mercadopago.setPublishableKey($('#tourmercadopagokey').val());
-		window.Mercadopago.getIdentificationTypes();
-  
-		function addEvent(to, type, fn){ 
-		  if(document.addEventListener){
-			  to.addEventListener(type, fn, false);
-		  } else if(document.attachEvent){
-			  to.attachEvent('on'+type, fn);
-		  } else {
-			  to['on'+type] = fn;
-		  }  
-	  }; 
-  
-  addEvent(document.querySelector('#cardNumber'), 'keyup', guessingPaymentMethod);
-  addEvent(document.querySelector('#cardNumber'), 'change', guessingPaymentMethod);
-  
-  function getBin() {
-	  var ccNumber = document.querySelector('input[data-checkout="cardNumber"]');
-	  return ccNumber.value.replace(/[ .-]/g, '').slice(0, 6);
-  };
-  
-  function guessingPaymentMethod(event) {
-	  var bin = getBin();
-  
-	  if (event.type == "keyup") {
-		  if (bin.length >= 6) {
-			  window.Mercadopago.getPaymentMethod({
-				  "bin": bin
-			  }, setPaymentMethodInfo);
-		  }
-	  } else {
-		  setTimeout(function() {
-			  if (bin.length >= 6) {
-				  window.Mercadopago.getPaymentMethod({
-					  "bin": bin
-				  }, setPaymentMethodInfo);
-			  }
-		  }, 100);
-	  }
-  };
-  
-  function setPaymentMethodInfo(status, response) {
-	  if (status == 200) {
-		  const paymentMethodElement = document.querySelector('input[name=paymentMethodId]');
-  
-		  if (paymentMethodElement) {
-			  paymentMethodElement.value = response[0].id;
-		  } else {
-			  const input = document.createElement('input');
-			  input.setAttribute('name', 'paymentMethodId');
-			  input.setAttribute('type', 'hidden');
-			  input.setAttribute('value', response[0].id);     
-  
-			  form.appendChild(input);
-		  }
-  
-		  Mercadopago.getInstallments({
-			  "bin": getBin(),
-			  "amount": parseFloat(document.querySelector('#amount').value),
-		  }, setInstallmentInfo);
-  
-	  } else {
-		  alert(`payment method info error: ${response}`);  
-	  }
-  };
-  
-  
-  let doSubmit = false;
-  addEvent(document.querySelector('.mercadopago'), 'submit', doPay);
-  function doPay(event){
-	  event.preventDefault();
-	  if(!doSubmit){
-		  var $form = document.querySelector('.mercadopago');
-  
-		  window.Mercadopago.createToken($form, sdkResponseHandler); // The function "sdkResponseHandler" is defined below
-  
-		  return false;
-	  }
-  };
-  
-  function sdkResponseHandler(status, response) {
-	  if (status != 200 && status != 201) {
-		  alert("Some of your information is wrong!");
-		  $('#preloader').hide();
-  
-	  }else{
-		  var form = document.querySelector('.mercadopago');
-		  var card = document.createElement('input');
-		  card.setAttribute('name', 'token');
-		  card.setAttribute('type', 'hidden');
-		  card.setAttribute('value', response.id);
-		  form.appendChild(card);
-		  doSubmit=true;
-		  form.submit();
-	  }
-  };
-  
-  
-  function setInstallmentInfo(status, response) {
-		  var selectorInstallments = document.querySelector("#installments"),
-		  fragment = document.createDocumentFragment();
-		  selectorInstallments.length = 0;
-  
-		  if (response.length > 0) {
-			  var option = new Option("Escolha...", '-1'),
-			  payerCosts = response[0].payer_costs;
-			  fragment.appendChild(option);
-  
-			  for (var i = 0; i < payerCosts.length; i++) {
-				  fragment.appendChild(new Option(payerCosts[i].recommended_message, payerCosts[i].installments));
-			  }
-  
-			  selectorInstallments.appendChild(fragment);
-			  selectorInstallments.removeAttribute('disabled');
-		  }
-	  };
-  
-		$('#docType').show();
-		$('.nice-select').addClass('d-none');
+	  const mp = new MercadoPago($("#tourmercadopagokey").val());
 
+	  const cardNumberElement = mp.fields
+		.create("cardNumber", {
+		  placeholder: "Card Number",
+		})
+		.mount("cardNumber");
+
+	  const expirationDateElement = mp.fields
+		.create("expirationDate", {
+		  placeholder: "MM/YY",
+		})
+		.mount("expirationDate");
+
+	  const securityCodeElement = mp.fields
+		.create("securityCode", {
+		  placeholder: "Security Code",
+		})
+		.mount("securityCode");
+
+	  (async function getIdentificationTypes() {
+		try {
+		  const identificationTypes = await mp.getIdentificationTypes();
+
+		  const identificationTypeElement =
+			document.getElementById("docType");
+		  console.log(identificationTypeElement);
+
+		  createSelectOptions(identificationTypeElement, identificationTypes);
+		} catch (e) {
+		  return console.error("Error getting identificationTypes: ", e);
+		}
+	  })();
+
+	  function createSelectOptions(
+		elem,
+		options,
+		labelsAndKeys = {
+		  label: "name",
+		  value: "id",
+		}
+	  ) {
+		const { label, value } = labelsAndKeys;
+
+		//heem.options.length = 0;
+
+		const tempOptions = document.createDocumentFragment();
+
+		options.forEach((option) => {
+		  const optValue = option[value];
+		  const optLabel = option[label];
+
+		  const opt = document.createElement("option");
+		  opt.value = optValue;
+		  opt.textContent = optLabel;
+
+		  tempOptions.appendChild(opt);
+		});
+
+		elem.appendChild(tempOptions);
+	  }
+	  cardNumberElement.on("binChange", getPaymentMethods);
+	  async function getPaymentMethods(data) {
+		const { bin } = data;
+		const { results } = await mp.getPaymentMethods({
+		  bin,
+		});
+		console.log(results);
+		return results[0];
+	  }
+
+	  async function getIssuers(paymentMethodId, bin) {
+		const issuears = await mp.getIssuers({
+		  paymentMethodId,
+		  bin,
+		});
+		console.log(issuers);
+		return issuers;
+	  }
+
+	  async function getInstallments(paymentMethodId, bin) {
+		const installments = await mp.getInstallments({
+		  amount: document.getElementById("transactionAmount").value,
+		  bin,
+		  paymentTypeId: "credit_card",
+		});
+	  }
+
+	  async function createCardToken() {
+		const token = await mp.fields.createCardToken({
+		  cardholderName,
+		  identificationType,
+		  identificationNumber,
+		});
+	  }
+	  let doSubmit = false;
+	  $(document).on("submit", ".mercadopago", function (e) {
+		getCardToken();
+		e.preventDefault();
+	  });
+	  async function getCardToken() {
+		if (!doSubmit) {
+		  const token = await mp.fields.createCardToken({
+			cardholderName: document.getElementById("cardholderName").value,
+			identificationType: document.getElementById("docType").value,
+			identificationNumber: document.getElementById("docNumber").value,
+		  });
+		  setCardTokenAndPay(token.id);
+		}
+	  }
+
+	  function setCardTokenAndPay(token) {
+		const form = document.querySelector("#payment-form");
+		$("#token").val(token);
+		doSubmit = true;
+		form.submit();
+	  }
 	} else {
-		$('form').removeClass('mercadopago');
-		$('.mercadapago-show').addClass('d-none');
-		$('.mercadapago-show input.card-elements').prop('required', false);
-		$('.mercadapago-show select#docType').prop('required', false);
+	  $(".mercadapago-show").addClass("d-none");
+	  $(".mercadapago-show select#docType").prop("required", false);
+	  $(".mercadapago-show input#docNumber").prop("required", false);
+	  $(".mercadapago-show input#cardholderName").prop("required", false);
 	}
-}
+  }
 	
 
     });
