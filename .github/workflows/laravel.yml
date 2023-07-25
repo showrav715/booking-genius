@@ -19,13 +19,14 @@ jobs:
           # i need cd project folder and install composer
         
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
+        run: composer update --prefer-dist --no-progress --no-suggest
         working-directory: project
 
      
 
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+        working-directory: project
 
       - name: Set up environment variables
         run: |
