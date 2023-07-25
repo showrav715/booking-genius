@@ -249,11 +249,6 @@
                             <input type="hidden" name="currency_sign" value="{{PriceHelper::showCurrency()}}">
                             <input type="hidden" name="ref_id" id="ref_id" value="">
                             <div class="col-lg-12 mt-4">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1"> I have read and accept the
-                                        <a href="#">terms and conditions</a></label>
-                                </div>
                                 <button type="submit" class="mybtn1 final-btn mt-3">{{__('Checkout')}}</button>
                             </div>
                         </div>
