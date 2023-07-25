@@ -36,7 +36,9 @@ jobs:
           sed -i 's/DB_PASSWORD=.*/DB_PASSWORD=${{ secrets.DB_PASSWORD }}/g' .env
         working-directory: project
 
-
+      - name: Generate Application Key
+        run: php artisan key:generate
+        working-directory: project
 
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
