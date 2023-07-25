@@ -16,12 +16,15 @@ jobs:
         uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
         with:
           php-version: '8.1'
-  
-      - name: Change working directory
-        run: cd project
-  
-      - name: Install dependencies
-        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+          extensions: mbstring, zip, intl, gd, pdo_mysql, exif, pcntl, bcmath, soap, sockets, opcache, mysqli, pdo, pdo_pgsql, pgsql, redis, imagick, mongodb, apcu, memcached, xdebug
+          # i insall composer /project 
+      - name: Install Composer
+        run: |
+          curl -sS https://getcomposer.org/installer -o composer-setup.php
+          php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+          rm composer-setup.php
+          composer install --prefer-dist --no-progress --no-suggest --no-interaction --optimize-autoloader --no-scripts
+          # i insall composer /project
 
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
