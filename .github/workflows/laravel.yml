@@ -46,5 +46,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /booking.geniusocean.xyz/ # Change this to your shared hosting's web directory
+          # booking.geniusocean.xyz
+          server-dir: /booking.geniusocean.xyz
           run: vendor/bin/phpunit
