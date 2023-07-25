@@ -47,5 +47,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           # booking.geniusocean.xyz
-          server-dir: /booking.geniusocean.xyz/
+          server-dir: home/geniusxyz/booking.geniusocean.xyz
           run: vendor/bin/phpunit
