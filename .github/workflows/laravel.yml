@@ -16,9 +16,6 @@ jobs:
         uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
         with:
           php-version: '8.1'
-          extensions: mbstring, zip, intl, gd, pdo_mysql, exif, pcntl, bcmath, soap, sockets, opcache, mysqli, pdo, pdo_pgsql, pgsql, redis, imagick, mongodb, apcu, memcached, xdebug
-          
-          
           # i need cd project folder and install composer
         
       - name: Install dependencies
@@ -40,7 +37,7 @@ jobs:
           echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
 
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@main
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
 
         with:
           server: ${{ secrets.FTP_SERVER }}
